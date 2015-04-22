@@ -1,9 +1,24 @@
-name: Solar Theme
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
 url: http://example.org
 description: A stylish blog using the Solarized color palette
 
+baseurl: "" # the subpath of your site, e.g. /blog/
+
+# Build settings
 permalink: /:year/:month/:day/:title/
 paginate: 10
-pygments: true
+highlighter: pygments
+markdown: kramdown
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+gems:
+  - jekyll-assets
+  - jekyll-assets/compass
