@@ -6,7 +6,7 @@
   padding: 0 20px
 
 #header
-  padding: 30px 0px 50px 0px
+  padding: 30px 0px 0px 0px
   margin: 20px 0
   h1
     font-family: $light-font-family
@@ -25,44 +25,21 @@
   nav
     max-width: 650px
     padding: 0 10px
-    margin: 6px auto
-    li
-      font-family: $light-font-family
-      font-weight: normal
-      list-style: none
-      display: inline
-      color: white
-      line-height: 50px
-      +text-shadow(0px 1px 0px rgba(0, 0, 0, 0.2))
-      font-size: 14px
-      a
-        color: white
-        border: 1px solid #5d910b
-        +background(linear_gradient(#93bd20, #659e10))
-        +border-radius(2px)
-        +box-shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7))
-        background-color: #93bd20
-        padding: 10px 12px
-        margin-top: 6px
-        line-height: 14px
-        font-size: 14px
-        display: inline-block
-        text-align: center
-        &:hover
-          +background(linear_gradient(#749619, #527f0e))
-          background-color: #659e10
-          border: 1px solid #527f0e
-          +box-shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0))
-      &.fork
-        float: left
-        margin-left: 0px
-      &.downloads
-        float: right
-        margin-left: 6px
-      &.title
-        float: right
-        margin-right: 10px
-        font-size: 11px
+    margin: 30px 0 30px 0
+    padding: 20px
+    border-top: 1px solid $grey-light
+    border-bottom: 1px solid $grey-light
+    ul
+      margin: 0
+      padding: 0
+      @include display-flex
+      @include justify-content(space-between)
+      list-style-type: none
+      width: 100%
+      li
+        font-family: $light-font-family
+        font-weight: normal
+        list-style: none
 
   @media print, screen and (max-width: $on-palm)
     height: auto
@@ -82,6 +59,13 @@
         width: 100%
 
 article.post
-  padding-bottom: 25px
-  margin-bottom: 25px
-  border-bottom: 1px solid $grey-light
+  margin-top: $article-margins
+  &:after
+    border-bottom: 1px solid $grey-light
+    display: block
+    width: 50%
+    margin: $article-margins auto
+    content: ''
+
+footer
+  text-align: center

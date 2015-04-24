@@ -17,12 +17,10 @@ body
   font: 14px/1.5 $regular-font-family
   color: $text-color
   font-weight: normal
-  background: $grey
-  background-attachment: fixed !important
-  +background(linear_gradient(#2a2a29, #1c1c1c))
+  background: $background-color
 
 h1, h2, h3, h4, h5, h6
-  color: #e8e8e8
+  color: $titles-color
   margin: 0 0 10px
   font-family: $regular-font-family
   font-weight: normal
@@ -40,7 +38,7 @@ h2
   font-size: 24px
 
 h4, h5, h6
-  color: #e8e8e8
+  color: $titles-color
 
 h3
   font-size: 18px
@@ -70,7 +68,7 @@ h1
     &:hover
       color: #ffeb9b
 
-ul
+//ul
   list-style-image: url("../images/bullet.png")
 
 strong
@@ -85,26 +83,29 @@ blockquote
   font-style: italic
 
 code
-  font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace
+  font-family: $monospaced-font-family
   color: #efefef
   font-size: 13px
-  margin: 0 4px
-  padding: 4px 6px
+  margin: 0 1px
+  padding: 4px
+  background-color: $grey-darker
   +border-radius(2px)
 
 pre
   padding: 8px 15px
-  background: #191919
-  +border-radius(2px)
+  background: $grey-darker
+  +border-radius(4px)
   border: 1px solid #121212
   +box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.3))
   overflow: auto
   overflow-y: hidden
   code
     color: #efefef
-    text-shadow: 0px 1px 0px #000
+    text-shadow: 0px 1px 0px $grey
     margin: 0
     padding: 0
+    +border-radius(initial)
+    background-color: transparent
 
 table
   width: 100%
