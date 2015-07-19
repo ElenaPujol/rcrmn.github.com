@@ -54,6 +54,12 @@
     margin: 30px 0 30px 0
     //border-top: 1px solid $grey-light
     border-bottom: 1px solid $grey-light
+
+    .menu-btn
+      display: none
+      text-align: right
+      font-size: 40px
+
     ul
       margin: 0
       padding: 0
@@ -80,12 +86,14 @@
       ul
       li.downloads, li.title
         display: none
-      li, li.fork, a, li.fork a
-        display: inline-block
-        float: none
-        margin: 0 auto
-        padding: 10px
-        width: 100%
+        text-align: center
+        li
+          font-size: 16px
+          border-top: 1px solid $grey-light
+          padding: 8px 0
+      .menu-btn
+        display: block
+
 
 article.post
   margin-top: $article-margins
@@ -98,3 +106,7 @@ article.post
 
 footer
   text-align: center
+  font-size: 10px
+  font-family: $light-font-family
+  p
+    margin-bottom: 0.6em

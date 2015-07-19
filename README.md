@@ -1,12 +1,12 @@
 Midnight Theme for Jekyll Blog
-==============================
+===============================
 
 Theme for [Jekyll](http://jekyllrb.com/) blogs, based on the [Midnight](https://github.com/mattgraham/Midnight) theme for github pages.
 
 
 
 Installation
---------------
+-------------
 
 There are two ways to install.
 
@@ -17,11 +17,11 @@ If you're starting a new blog, you want to clone-and-go. Just `git clone ...`, m
 
 
 Demo
--------
+-----
 
 
 
 License
----------
+--------
 
 MIT
