@@ -13,15 +13,15 @@ permalink: /:year/:month/:day/:title/
 paginate: 10
 
 # Setup
-title:            Your Awesome Title
-description:      A blog using a modified Midnight theme
-url:              http://example.org
+title:            Stacktrace
+description:      Blog by a game designer and player.
+url:              http://rcrmn.github.io
 baseurl:          '' # the subpath of your site, e.g. /blog/
 
 
 # Author details
-email:            your-email@domain.com
-name:             Creator Name # For the copyright notice
+email:            rcrmn16@gmail.com
+name:             Roc Ramon # For the copyright notice
 
 
 # Social
