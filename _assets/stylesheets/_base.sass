@@ -28,6 +28,9 @@ h1, h2, h3, h4, h5, h6
 p, ul, ol, table, pre, dl
   margin: 0 0 20px
 
+p
+  text-align: justify
+
 h1, h2, h3
   line-height: 1.2
 
@@ -68,8 +71,6 @@ h1
     &:hover
       color: #ffeb9b
 
-//ul
-  list-style-image: url("../images/bullet.png")
 
 strong
   font-family: $bold-font-family !important
@@ -90,6 +91,11 @@ code
   padding: 4px
   background-color: $grey-darker
   +border-radius(2px)
+  border: 1px solid black
+  word-break: keep-all
+  display: inline-block
+  pre &
+    border: 0 !important
 
 pre
   padding: 8px 15px
@@ -128,7 +134,6 @@ hr
   border: 0
   outline: none
   height: 3px
-  background: transparent url("../images/hr.gif") center center repeat-x
   margin: 0 0 20px
 
 dt

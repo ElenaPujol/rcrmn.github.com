@@ -17,9 +17,14 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
+
+  {% stylesheet slicknav.min %}
+  {% javascript jquery.slicknav.min %}
+
+
   <script>
   $(document).ready(function(){
-    $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
+    $('#menubar ul').slicknav({'label': '', 'prependTo': '#header'});
   });
   </script>
 
@@ -62,7 +67,6 @@
 
 
 
-  <script src="/assets/js/jquery.mobilemenu.min.js"></script>
 
 
 </body>

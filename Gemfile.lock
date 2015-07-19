@@ -65,6 +65,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
+    json (1.8.2)
     kramdown (1.6.0)
     liquid (2.6.2)
     listen (2.10.0)
@@ -112,3 +113,5 @@ DEPENDENCIES
   font-awesome-sass (~> 4.3.0)
   jekyll
   jekyll-assets
+  jekyll-coffeescript
+  json
