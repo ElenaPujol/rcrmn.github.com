@@ -13,8 +13,8 @@ permalink: /:year/:month/:day/:title/
 paginate: 10
 
 # Setup
-title:            Stacktrace
-description:      Blog by a game designer and player.
+title:            Roll for sanity
+description:      Blog by a game designer, programmer and player.
 url:              http://rcrmn.github.io
 baseurl:          '' # the subpath of your site, e.g. /blog/
 
