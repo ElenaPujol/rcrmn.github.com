@@ -1,27 +1,11 @@
-Midnight Theme for Jekyll Blog
+Jekyll Blog for rcrmn.github.io
 ===============================
 
-Theme for [Jekyll](http://jekyllrb.com/) blogs, based on the [Midnight](https://github.com/mattgraham/Midnight) theme for github pages.
+The page is published in the `master` branch. The `jekyll` branch contains all the code
+to create the published site.
 
+In the directory `_posts` are the posts to be published in markdown.
 
+To publish, run `rake` task from `jekyll` branch. There are two tasks: `generate` and `publish`.
+`publish` is the default.
 
-Installation
--------------
-
-There are two ways to install.
-
-You can either clone-and-go, copying the repository and tweaking the contents to taste, or you can cherry-pick the files you want and integrate them into an existing Jekyll instance.
-
-If you're starting a new blog, you want to clone-and-go. Just `git clone ...`, make any changes you want to the template, pages or `_config.yml` and start blogging with Jekyll. Easy.
-
-
-
-Demo
------
-
-
-
-License
---------
-
-MIT
