@@ -14,7 +14,7 @@ paginate: 10
 
 # Setup
 title:            Roll for sanity
-description:      Blog by a game designer, programmer and player.
+description:      Blog by a game programmer and player.
 url:              http://rcrmn.github.io
 baseurl:          '' # the subpath of your site, e.g. /blog/
 
