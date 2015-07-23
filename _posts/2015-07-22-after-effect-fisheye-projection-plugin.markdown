@@ -9,6 +9,19 @@ categories: jekyll update
 I've decided to make this post since it was a real pain in the ass to find any documentation on how to make
 a plugin for After Effects/Premiere Pro in the web that wasn't 10 years old at the least.
 
+## Background
+There are multiple ways to record 3D videos. In this post we will be speaking of videos recorded for 3D played in an
+immersive environment using a frontal dome.
+
+This kind of videos are recorded using a two-camera rig with fisheye with a field of view of 180º. These videos look
+something like this:
+
+![](/images/2015-07-22/fisheye-circle-1.jpg){: style="max-width:300px"}
+
+This image can be presented with an equirectangular projection, which would look like this:
+
+![](/images/2015-07-22/fisheye-transformed-1.jpg){: style="max-width:300px"}
+
 ## The problem
 We have to make some 3D videos that have been recorde using two GoPro with a 180 fisheye lens each one. The problem
 is that the vides need to be in equirectangular projection, since the software it has to be played on doesn't support
@@ -36,9 +49,53 @@ So, having the filter already created and the maths of it working correctly, I w
 full C++ After Effects plug-in. It took me a whole day to have it working right.
 
 ## The first enemy: projection maths
-So, we have a video that looks like a circle. We know it unfolds on a semi-sphere and covers it completely.
-We have to transform it so that we have a square that also unfolds and covers a semi-sphere.
-TODO: Add images
+The filter we are going to create is going to use the standard way of applying transformations to an image:
+For each pixel of the output, it's going to find the untransformed position in the input image and take
+the color corresponding to that position. We are going to use subpixel sampling to avoid tessellation.
+
+To get the untransformed position from the input, we have to consider the two coordinate systems we are working on.
+
+To apply the equirectangular projected image over the hemisphere we use the following set of coordinates:
+
+![Equirectangular coordinates](/images/2015-07-22/semi-sphere-equirect-coords.png){: style="max-width:300px"}
+
+Where the angle θ will be used as x coordinates of the image and the angle φ will be treated as y coordinates.
+
+![Equirectangular projection](/images/2015-07-22/equirectangular-projection.png){: style="max-width:300px"}
+
+To apply the equidistant fisheye projected image over the hemisphere we use the following set of coordinates.
+
+![Equidistant fisheye coordinates](/images/2015-07-22/semi-sphere-equidist-coords.png){: style="max-width:300px"}
+
+Where the angle θ' will be used as the angle in the circular image, and the radius r will be used as the radius
+in the circular image, as follows:
+
+![Equirectangular projection](/images/2015-07-22/equidistant-projection.png){: style="max-width:300px"}
+
+So, to get the x',y' position for the circular image we will have to first pass the coordinates x,y from the rectangular
+output image to spherical coordinates using the first coordinate system, then those to the second shown spherical
+coordinate system, then those to the polar projection and then pass the polar system to cardinal x',y'.
+
+The formulas for each step will be:
+
+![](/images/2015-07-22/math-1.png)
+
+![](/images/2015-07-22/math-1.png)
+
+![](/images/2015-07-22/math-3.png)
+
+![](/images/2015-07-22/math-4.png)
+
+![](/images/2015-07-22/math-5.png)
+
+Once we have the unprojected coordinates, we apply a subpixel sampling filter to the original image at that point,
+and the color we obtain is the color used for the transformed image.
+
+## The second enemy: After Effects SDK
+
+
+
+
 
 
 C'ya!
