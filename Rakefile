@@ -31,4 +31,52 @@ task :publish => [:generate] do
   end
 end
 
+namespace :new do
+	desc "Create the file for a new post"
+	task :post do
+		STDOUT.puts "Input the title of the post. It will be used for the permalink too.\nAny non-alphanumeric symbols will be converted to `-' in the permalink."
+
+		title = STDIN.gets.chomp
+		date = Time.now.strftime("%Y-%m-%d")
+		time = Time.now.strftime("%H:%M:%S")
+		fname = Time.now.strftime("%Y-%m-%d") + "-" + title.gsub(/^\W+|\W+$/,"").gsub(/\W+/,"-")
+		File.open("_posts/#{fname}.markdown", "w") {|f|
+			# Add file content
+			f.puts("---",
+				   "layout: post",
+				   "title: \"#{title}\"",
+				   "date: #{date} #{time}",
+				   "categories: jekyll update",
+				   "---")
+		}
+
+		STDOUT.puts "File #{fname}.markdown created in directory _posts."
+	end
+
+	desc "Create the file for a link post"
+	task :link do
+		STDOUT.puts "Input the title of the link. It will be used for the permalink too.\nAny non-alphanumeric symbols will be converted to `-' in the permalink."
+		title = STDIN.gets.chomp
+
+		STDOUT.puts "Input the url for the link."
+		url = STDIN.gets.chomp
+
+		date = Time.now.strftime("%Y-%m-%d")
+		time = Time.now.strftime("%H:%M:%S")
+		fname = Time.now.strftime("%Y-%m-%d") + "-" + title.gsub(/^\W+|\W+$/,"").gsub(/\W+/,"-")
+
+		File.open("_posts/#{fname}.markdown", "w") {|f|
+			# Add file content
+			f.puts("---",
+				   "layout: post",
+				   "title: \"#{title}\"",
+				   "date: #{date} #{time}",
+				   "external-url: #{url}",
+				   "---")
+		}
+
+		STDOUT.puts "File #{fname}.markdown created in directory _posts."
+	end
+end
+
 task :default => :publish
