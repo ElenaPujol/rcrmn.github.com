@@ -184,6 +184,13 @@ a bit better if the images were stretched a bit outside the square, as can be se
 ![](/images/2015-07-24/fisheye-transformed-2.jpg){: style="max-width:300px"}
 
 I'm sorry that this post is not more tutorialish, I can't publicly share the work done here, but it might help
-someone anyway, at least in the maths. Thanks for reading to anyone who stayed this long.
+someone anyway, at least in the maths.
+
+If you are looking for an actual tutorial, [here](http://www.mactech.com/articles/mactech/Vol.15/15.09/AfterEffectsPlugins/index.html)
+you can find the one I started with. It's quite old (1999), but it seems that the SDK is not much different.
+I suggest using that and looking through the example plugins provided in the SDK, there are good examples for
+many things.
+
+Thanks for reading to anyone who stayed this long.
 
 C'ya!
