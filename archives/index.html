@@ -1,21 +1,115 @@
----
-layout: default
-title: Archives
----
+<!DOCTYPE html>
+<html>
+<head>
 
-<div id="blog-archives">
+  <meta charset="UTF-8">
+  <title>Archives - Roll for sanity</title>
+  <meta name="description" content="Blog by a game programmer and player.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-	{% for post in site.posts %}
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+  <link rel="stylesheet" href="/assets/main-51c9af665fd6c424a27ee29e43ab6bda.css">
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/assets/slicknav.min-d646854443b51803fb7e8299d3978ec6.css">
+  <script src="/assets/jquery.slicknav.min-e9ee519698b5594df0deb583d5d7cfae.js"></script>
+
+
+  <script>
+  $(document).ready(function(){
+    $('#menubar ul').slicknav({'label': '', 'prependTo': '#header', 'parentTag': 'li'});
+  });
+  </script>
+
+</head>
+
+<body>
+
+
+
+
+  <div class="wrapper">
+
+    <header id="header">
+	<h1><a href="/">Roll for sanity</a></h1>
+      <h2>Blog by a game programmer and player.</h2>
+
+      <nav id="menubar">
+        <ul>
+          
+            <li>
+              <a class="fill" href="/">Home</a>
+            </li>
+          
+            <li>
+              <a class="fill" href="/archives">Archive</a>
+            </li>
+          
+            <li>
+              <a class="fill" href="/about">About</a>
+            </li>
+          
+            <li>
+              <a class="fill" href="http://rcrmn.nl/portfolio">Portfolio</a>
+            </li>
+          
+          <li>
+            
+            
+              <a class="icon" href="https://github.com/rcrmn" target="_blank"><i class="fa fa-github"></i></a>
+            
+            
+              <a class="icon" href="https://twitter.com/rcrmn_" target="_blank"><i class="fa fa-twitter-square"></i></a>
+            
+            
+              <a class="icon" href="https://stackoverflow.com/users/672151" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+            
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="content">
+      <div id="blog-archives">
+
+	
 		<article class="post">
-			{% if post.external-url %}
-				<h1>
-					<a href="{{ post.external-url }}">{{ post.title }}</a>
-					<a class="anchor" href="{{ site.baseurl }}{{ post.url }}"><sub><i class="fa fa-link"></i></sub></a>
-				</h1>
-			{% else %}
-				<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-			{% endif %}
+			
+				<h1><a href="/2015/07/24/after-effect-fisheye-projection-plugin/">Fisheye to Equirectangular Projection Plugin for After Effects</a></h1>
+			
 		</article>
-	{% endfor %}
+	
+		<article class="post">
+			
+				<h1><a href="/2015/07/20/welcome-to-the-blog/">Welcome to the Blog!</a></h1>
+			
+		</article>
+	
 
 </div>
+
+    </section>
+
+    <footer id="footer">
+      <p class="copyright">
+        Copyright &copy; 2015 Roc Ramon. Powered by <a href="http://jekyllrb.com">Jekyll</a>.
+        <a href="https://github.com/rcrmn/jekyll-dusk-blog">Theme</a> by <a href="http://rcrmn.github.io">rcrmn</a>,
+        based on <a href="https://github.com/mattgraham/Midnight">Midnight</a>.
+      </p>
+      <p class="footer-links">
+		  <a href="/feed.xml">Blog RSS Feed</a>
+      </p>
+    </footer>
+  </div>
+  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+
+</body>
+</html>

@@ -1,0 +1,4216 @@
+@charset "UTF-8";
+/*!
+ *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/assets/font-awesome/fontawesome-webfont-85d7e938fc495a7760fc27d720618db9.eot");
+  src: url("/assets/font-awesome/fontawesome-webfont-85d7e938fc495a7760fc27d720618db9.eot?#iefix") format("embedded-opentype"), url("/assets/font-awesome/fontawesome-webfont-8a48e2bab4a2b77d58ccc1f02ace791b.woff2") format("woff2"), url("/assets/font-awesome/fontawesome-webfont-c4d93f1236d235f5449967a2a6457c7c.woff") format("woff"), url("/assets/font-awesome/fontawesome-webfont-0c26417004c4bc00da825a83c6537fc4.ttf") format("truetype"), url("/assets/font-awesome/fontawesome-webfont-77abe335087d152b71264d95a848c20d.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 4, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_core.scss */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 6, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+/* line 11, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
+.fa-2x {
+  font-size: 2em;
+}
+
+/* line 12, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
+.fa-3x {
+  font-size: 3em;
+}
+
+/* line 13, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
+.fa-4x {
+  font-size: 4em;
+}
+
+/* line 14, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
+.fa-5x {
+  font-size: 5em;
+}
+
+/* line 3, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_fixed-width.scss */
+.fa-fw {
+  width: 1.28571em;
+  text-align: center;
+}
+
+/* line 4, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none;
+}
+/* line 8, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
+.fa-ul > li {
+  position: relative;
+}
+
+/* line 10, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center;
+}
+/* line 16, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
+.fa-li.fa-lg {
+  left: -1.85714em;
+}
+
+/* line 4, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+}
+
+/* line 10, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 11, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 14, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-left {
+  margin-right: .3em;
+}
+/* line 15, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-right {
+  margin-left: .3em;
+}
+
+/* line 4, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_animated.scss */
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+/* line 9, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_animated.scss */
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/* line 4, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 5, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 6, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 8, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 9, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* line 14, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  -webkit-filter: none;
+          filter: none;
+}
+
+/* line 4, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 12, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 18, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+/* line 19, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+/* line 20, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 5, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glass:before {
+  content: "";
+}
+
+/* line 6, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-music:before {
+  content: "";
+}
+
+/* line 7, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search:before {
+  content: "";
+}
+
+/* line 8, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-o:before {
+  content: "";
+}
+
+/* line 9, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart:before {
+  content: "";
+}
+
+/* line 10, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star:before {
+  content: "";
+}
+
+/* line 11, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-o:before {
+  content: "";
+}
+
+/* line 12, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user:before {
+  content: "";
+}
+
+/* line 13, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-film:before {
+  content: "";
+}
+
+/* line 14, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-large:before {
+  content: "";
+}
+
+/* line 15, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th:before {
+  content: "";
+}
+
+/* line 16, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-list:before {
+  content: "";
+}
+
+/* line 17, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check:before {
+  content: "";
+}
+
+/* line 18, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "";
+}
+
+/* line 21, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-plus:before {
+  content: "";
+}
+
+/* line 22, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-minus:before {
+  content: "";
+}
+
+/* line 23, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-power-off:before {
+  content: "";
+}
+
+/* line 24, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-signal:before {
+  content: "";
+}
+
+/* line 25, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gear:before,
+.fa-cog:before {
+  content: "";
+}
+
+/* line 27, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trash-o:before {
+  content: "";
+}
+
+/* line 28, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-home:before {
+  content: "";
+}
+
+/* line 29, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-o:before {
+  content: "";
+}
+
+/* line 30, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-clock-o:before {
+  content: "";
+}
+
+/* line 31, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-road:before {
+  content: "";
+}
+
+/* line 32, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-download:before {
+  content: "";
+}
+
+/* line 33, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-down:before {
+  content: "";
+}
+
+/* line 34, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-up:before {
+  content: "";
+}
+
+/* line 35, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-inbox:before {
+  content: "";
+}
+
+/* line 36, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle-o:before {
+  content: "";
+}
+
+/* line 37, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "";
+}
+
+/* line 39, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-refresh:before {
+  content: "";
+}
+
+/* line 40, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-alt:before {
+  content: "";
+}
+
+/* line 41, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lock:before {
+  content: "";
+}
+
+/* line 42, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag:before {
+  content: "";
+}
+
+/* line 43, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-headphones:before {
+  content: "";
+}
+
+/* line 44, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-off:before {
+  content: "";
+}
+
+/* line 45, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-down:before {
+  content: "";
+}
+
+/* line 46, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-up:before {
+  content: "";
+}
+
+/* line 47, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qrcode:before {
+  content: "";
+}
+
+/* line 48, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-barcode:before {
+  content: "";
+}
+
+/* line 49, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tag:before {
+  content: "";
+}
+
+/* line 50, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tags:before {
+  content: "";
+}
+
+/* line 51, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-book:before {
+  content: "";
+}
+
+/* line 52, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark:before {
+  content: "";
+}
+
+/* line 53, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-print:before {
+  content: "";
+}
+
+/* line 54, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera:before {
+  content: "";
+}
+
+/* line 55, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-font:before {
+  content: "";
+}
+
+/* line 56, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bold:before {
+  content: "";
+}
+
+/* line 57, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-italic:before {
+  content: "";
+}
+
+/* line 58, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-height:before {
+  content: "";
+}
+
+/* line 59, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-width:before {
+  content: "";
+}
+
+/* line 60, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-left:before {
+  content: "";
+}
+
+/* line 61, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-center:before {
+  content: "";
+}
+
+/* line 62, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-right:before {
+  content: "";
+}
+
+/* line 63, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-justify:before {
+  content: "";
+}
+
+/* line 64, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list:before {
+  content: "";
+}
+
+/* line 65, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "";
+}
+
+/* line 67, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-indent:before {
+  content: "";
+}
+
+/* line 68, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-video-camera:before {
+  content: "";
+}
+
+/* line 69, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: "";
+}
+
+/* line 72, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil:before {
+  content: "";
+}
+
+/* line 73, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-marker:before {
+  content: "";
+}
+
+/* line 74, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adjust:before {
+  content: "";
+}
+
+/* line 75, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tint:before {
+  content: "";
+}
+
+/* line 76, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "";
+}
+
+/* line 78, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square-o:before {
+  content: "";
+}
+
+/* line 79, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square-o:before {
+  content: "";
+}
+
+/* line 80, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows:before {
+  content: "";
+}
+
+/* line 81, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-backward:before {
+  content: "";
+}
+
+/* line 82, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-backward:before {
+  content: "";
+}
+
+/* line 83, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-backward:before {
+  content: "";
+}
+
+/* line 84, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play:before {
+  content: "";
+}
+
+/* line 85, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause:before {
+  content: "";
+}
+
+/* line 86, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop:before {
+  content: "";
+}
+
+/* line 87, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-forward:before {
+  content: "";
+}
+
+/* line 88, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-forward:before {
+  content: "";
+}
+
+/* line 89, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-forward:before {
+  content: "";
+}
+
+/* line 90, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eject:before {
+  content: "";
+}
+
+/* line 91, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-left:before {
+  content: "";
+}
+
+/* line 92, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-right:before {
+  content: "";
+}
+
+/* line 93, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-circle:before {
+  content: "";
+}
+
+/* line 94, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-circle:before {
+  content: "";
+}
+
+/* line 95, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle:before {
+  content: "";
+}
+
+/* line 96, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle:before {
+  content: "";
+}
+
+/* line 97, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question-circle:before {
+  content: "";
+}
+
+/* line 98, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info-circle:before {
+  content: "";
+}
+
+/* line 99, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crosshairs:before {
+  content: "";
+}
+
+/* line 100, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle-o:before {
+  content: "";
+}
+
+/* line 101, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle-o:before {
+  content: "";
+}
+
+/* line 102, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ban:before {
+  content: "";
+}
+
+/* line 103, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-left:before {
+  content: "";
+}
+
+/* line 104, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-right:before {
+  content: "";
+}
+
+/* line 105, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-up:before {
+  content: "";
+}
+
+/* line 106, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-down:before {
+  content: "";
+}
+
+/* line 107, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "";
+}
+
+/* line 109, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-expand:before {
+  content: "";
+}
+
+/* line 110, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compress:before {
+  content: "";
+}
+
+/* line 111, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus:before {
+  content: "";
+}
+
+/* line 112, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus:before {
+  content: "";
+}
+
+/* line 113, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-asterisk:before {
+  content: "";
+}
+
+/* line 114, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation-circle:before {
+  content: "";
+}
+
+/* line 115, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gift:before {
+  content: "";
+}
+
+/* line 116, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-leaf:before {
+  content: "";
+}
+
+/* line 117, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire:before {
+  content: "";
+}
+
+/* line 118, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye:before {
+  content: "";
+}
+
+/* line 119, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye-slash:before {
+  content: "";
+}
+
+/* line 120, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "";
+}
+
+/* line 122, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plane:before {
+  content: "";
+}
+
+/* line 123, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar:before {
+  content: "";
+}
+
+/* line 124, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-random:before {
+  content: "";
+}
+
+/* line 125, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment:before {
+  content: "";
+}
+
+/* line 126, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magnet:before {
+  content: "";
+}
+
+/* line 127, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-up:before {
+  content: "";
+}
+
+/* line 128, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-down:before {
+  content: "";
+}
+
+/* line 129, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-retweet:before {
+  content: "";
+}
+
+/* line 130, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-cart:before {
+  content: "";
+}
+
+/* line 131, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder:before {
+  content: "";
+}
+
+/* line 132, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open:before {
+  content: "";
+}
+
+/* line 133, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-v:before {
+  content: "";
+}
+
+/* line 134, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-h:before {
+  content: "";
+}
+
+/* line 135, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "";
+}
+
+/* line 137, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter-square:before {
+  content: "";
+}
+
+/* line 138, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-square:before {
+  content: "";
+}
+
+/* line 139, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera-retro:before {
+  content: "";
+}
+
+/* line 140, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-key:before {
+  content: "";
+}
+
+/* line 141, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gears:before,
+.fa-cogs:before {
+  content: "";
+}
+
+/* line 143, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments:before {
+  content: "";
+}
+
+/* line 144, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-up:before {
+  content: "";
+}
+
+/* line 145, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-down:before {
+  content: "";
+}
+
+/* line 146, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half:before {
+  content: "";
+}
+
+/* line 147, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart-o:before {
+  content: "";
+}
+
+/* line 148, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-out:before {
+  content: "";
+}
+
+/* line 149, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin-square:before {
+  content: "";
+}
+
+/* line 150, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumb-tack:before {
+  content: "";
+}
+
+/* line 151, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link:before {
+  content: "";
+}
+
+/* line 152, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-in:before {
+  content: "";
+}
+
+/* line 153, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trophy:before {
+  content: "";
+}
+
+/* line 154, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-square:before {
+  content: "";
+}
+
+/* line 155, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-upload:before {
+  content: "";
+}
+
+/* line 156, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lemon-o:before {
+  content: "";
+}
+
+/* line 157, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone:before {
+  content: "";
+}
+
+/* line 158, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square-o:before {
+  content: "";
+}
+
+/* line 159, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark-o:before {
+  content: "";
+}
+
+/* line 160, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone-square:before {
+  content: "";
+}
+
+/* line 161, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter:before {
+  content: "";
+}
+
+/* line 162, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "";
+}
+
+/* line 164, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github:before {
+  content: "";
+}
+
+/* line 165, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock:before {
+  content: "";
+}
+
+/* line 166, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-credit-card:before {
+  content: "";
+}
+
+/* line 167, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rss:before {
+  content: "";
+}
+
+/* line 168, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hdd-o:before {
+  content: "";
+}
+
+/* line 169, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullhorn:before {
+  content: "";
+}
+
+/* line 170, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell:before {
+  content: "";
+}
+
+/* line 171, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-certificate:before {
+  content: "";
+}
+
+/* line 172, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-right:before {
+  content: "";
+}
+
+/* line 173, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-left:before {
+  content: "";
+}
+
+/* line 174, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-up:before {
+  content: "";
+}
+
+/* line 175, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-down:before {
+  content: "";
+}
+
+/* line 176, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-left:before {
+  content: "";
+}
+
+/* line 177, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-right:before {
+  content: "";
+}
+
+/* line 178, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-up:before {
+  content: "";
+}
+
+/* line 179, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-down:before {
+  content: "";
+}
+
+/* line 180, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-globe:before {
+  content: "";
+}
+
+/* line 181, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wrench:before {
+  content: "";
+}
+
+/* line 182, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tasks:before {
+  content: "";
+}
+
+/* line 183, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-filter:before {
+  content: "";
+}
+
+/* line 184, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-briefcase:before {
+  content: "";
+}
+
+/* line 185, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-alt:before {
+  content: "";
+}
+
+/* line 186, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-group:before,
+.fa-users:before {
+  content: "";
+}
+
+/* line 188, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chain:before,
+.fa-link:before {
+  content: "";
+}
+
+/* line 190, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud:before {
+  content: "";
+}
+
+/* line 191, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flask:before {
+  content: "";
+}
+
+/* line 192, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "";
+}
+
+/* line 194, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "";
+}
+
+/* line 196, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paperclip:before {
+  content: "";
+}
+
+/* line 197, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "";
+}
+
+/* line 199, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square:before {
+  content: "";
+}
+
+/* line 200, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "";
+}
+
+/* line 203, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ul:before {
+  content: "";
+}
+
+/* line 204, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ol:before {
+  content: "";
+}
+
+/* line 205, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-strikethrough:before {
+  content: "";
+}
+
+/* line 206, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-underline:before {
+  content: "";
+}
+
+/* line 207, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-table:before {
+  content: "";
+}
+
+/* line 208, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magic:before {
+  content: "";
+}
+
+/* line 209, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-truck:before {
+  content: "";
+}
+
+/* line 210, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest:before {
+  content: "";
+}
+
+/* line 211, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest-square:before {
+  content: "";
+}
+
+/* line 212, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus-square:before {
+  content: "";
+}
+
+/* line 213, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus:before {
+  content: "";
+}
+
+/* line 214, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-money:before {
+  content: "";
+}
+
+/* line 215, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-down:before {
+  content: "";
+}
+
+/* line 216, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-up:before {
+  content: "";
+}
+
+/* line 217, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-left:before {
+  content: "";
+}
+
+/* line 218, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-right:before {
+  content: "";
+}
+
+/* line 219, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-columns:before {
+  content: "";
+}
+
+/* line 220, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "";
+}
+
+/* line 222, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "";
+}
+
+/* line 224, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "";
+}
+
+/* line 226, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope:before {
+  content: "";
+}
+
+/* line 227, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin:before {
+  content: "";
+}
+
+/* line 228, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "";
+}
+
+/* line 230, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "";
+}
+
+/* line 232, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "";
+}
+
+/* line 234, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment-o:before {
+  content: "";
+}
+
+/* line 235, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments-o:before {
+  content: "";
+}
+
+/* line 236, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "";
+}
+
+/* line 238, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sitemap:before {
+  content: "";
+}
+
+/* line 239, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-umbrella:before {
+  content: "";
+}
+
+/* line 240, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "";
+}
+
+/* line 242, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lightbulb-o:before {
+  content: "";
+}
+
+/* line 243, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exchange:before {
+  content: "";
+}
+
+/* line 244, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-download:before {
+  content: "";
+}
+
+/* line 245, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-upload:before {
+  content: "";
+}
+
+/* line 246, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-md:before {
+  content: "";
+}
+
+/* line 247, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stethoscope:before {
+  content: "";
+}
+
+/* line 248, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-suitcase:before {
+  content: "";
+}
+
+/* line 249, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-o:before {
+  content: "";
+}
+
+/* line 250, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-coffee:before {
+  content: "";
+}
+
+/* line 251, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cutlery:before {
+  content: "";
+}
+
+/* line 252, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text-o:before {
+  content: "";
+}
+
+/* line 253, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building-o:before {
+  content: "";
+}
+
+/* line 254, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hospital-o:before {
+  content: "";
+}
+
+/* line 255, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ambulance:before {
+  content: "";
+}
+
+/* line 256, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-medkit:before {
+  content: "";
+}
+
+/* line 257, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fighter-jet:before {
+  content: "";
+}
+
+/* line 258, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-beer:before {
+  content: "";
+}
+
+/* line 259, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-h-square:before {
+  content: "";
+}
+
+/* line 260, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square:before {
+  content: "";
+}
+
+/* line 261, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-left:before {
+  content: "";
+}
+
+/* line 262, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-right:before {
+  content: "";
+}
+
+/* line 263, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-up:before {
+  content: "";
+}
+
+/* line 264, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-down:before {
+  content: "";
+}
+
+/* line 265, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-left:before {
+  content: "";
+}
+
+/* line 266, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-right:before {
+  content: "";
+}
+
+/* line 267, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-up:before {
+  content: "";
+}
+
+/* line 268, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-down:before {
+  content: "";
+}
+
+/* line 269, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-desktop:before {
+  content: "";
+}
+
+/* line 270, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-laptop:before {
+  content: "";
+}
+
+/* line 271, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tablet:before {
+  content: "";
+}
+
+/* line 272, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "";
+}
+
+/* line 274, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o:before {
+  content: "";
+}
+
+/* line 275, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-left:before {
+  content: "";
+}
+
+/* line 276, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-right:before {
+  content: "";
+}
+
+/* line 277, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spinner:before {
+  content: "";
+}
+
+/* line 278, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle:before {
+  content: "";
+}
+
+/* line 279, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "";
+}
+
+/* line 281, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-alt:before {
+  content: "";
+}
+
+/* line 282, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-o:before {
+  content: "";
+}
+
+/* line 283, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open-o:before {
+  content: "";
+}
+
+/* line 284, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-smile-o:before {
+  content: "";
+}
+
+/* line 285, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-frown-o:before {
+  content: "";
+}
+
+/* line 286, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meh-o:before {
+  content: "";
+}
+
+/* line 287, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gamepad:before {
+  content: "";
+}
+
+/* line 288, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-keyboard-o:before {
+  content: "";
+}
+
+/* line 289, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-o:before {
+  content: "";
+}
+
+/* line 290, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-checkered:before {
+  content: "";
+}
+
+/* line 291, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-terminal:before {
+  content: "";
+}
+
+/* line 292, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code:before {
+  content: "";
+}
+
+/* line 293, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "";
+}
+
+/* line 295, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "";
+}
+
+/* line 298, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-location-arrow:before {
+  content: "";
+}
+
+/* line 299, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crop:before {
+  content: "";
+}
+
+/* line 300, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code-fork:before {
+  content: "";
+}
+
+/* line 301, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "";
+}
+
+/* line 303, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question:before {
+  content: "";
+}
+
+/* line 304, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info:before {
+  content: "";
+}
+
+/* line 305, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation:before {
+  content: "";
+}
+
+/* line 306, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-superscript:before {
+  content: "";
+}
+
+/* line 307, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-subscript:before {
+  content: "";
+}
+
+/* line 308, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eraser:before {
+  content: "";
+}
+
+/* line 309, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-puzzle-piece:before {
+  content: "";
+}
+
+/* line 310, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone:before {
+  content: "";
+}
+
+/* line 311, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone-slash:before {
+  content: "";
+}
+
+/* line 312, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shield:before {
+  content: "";
+}
+
+/* line 313, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-o:before {
+  content: "";
+}
+
+/* line 314, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire-extinguisher:before {
+  content: "";
+}
+
+/* line 315, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rocket:before {
+  content: "";
+}
+
+/* line 316, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-maxcdn:before {
+  content: "";
+}
+
+/* line 317, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-left:before {
+  content: "";
+}
+
+/* line 318, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-right:before {
+  content: "";
+}
+
+/* line 319, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-up:before {
+  content: "";
+}
+
+/* line 320, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-down:before {
+  content: "";
+}
+
+/* line 321, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-html5:before {
+  content: "";
+}
+
+/* line 322, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-css3:before {
+  content: "";
+}
+
+/* line 323, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-anchor:before {
+  content: "";
+}
+
+/* line 324, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock-alt:before {
+  content: "";
+}
+
+/* line 325, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullseye:before {
+  content: "";
+}
+
+/* line 326, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-h:before {
+  content: "";
+}
+
+/* line 327, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-v:before {
+  content: "";
+}
+
+/* line 328, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rss-square:before {
+  content: "";
+}
+
+/* line 329, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle:before {
+  content: "";
+}
+
+/* line 330, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ticket:before {
+  content: "";
+}
+
+/* line 331, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square:before {
+  content: "";
+}
+
+/* line 332, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square-o:before {
+  content: "";
+}
+
+/* line 333, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-up:before {
+  content: "";
+}
+
+/* line 334, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-down:before {
+  content: "";
+}
+
+/* line 335, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square:before {
+  content: "";
+}
+
+/* line 336, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil-square:before {
+  content: "";
+}
+
+/* line 337, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link-square:before {
+  content: "";
+}
+
+/* line 338, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square:before {
+  content: "";
+}
+
+/* line 339, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compass:before {
+  content: "";
+}
+
+/* line 340, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "";
+}
+
+/* line 342, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "";
+}
+
+/* line 344, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "";
+}
+
+/* line 346, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-euro:before,
+.fa-eur:before {
+  content: "";
+}
+
+/* line 348, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gbp:before {
+  content: "";
+}
+
+/* line 349, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "";
+}
+
+/* line 351, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rupee:before,
+.fa-inr:before {
+  content: "";
+}
+
+/* line 353, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "";
+}
+
+/* line 357, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "";
+}
+
+/* line 360, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-won:before,
+.fa-krw:before {
+  content: "";
+}
+
+/* line 362, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "";
+}
+
+/* line 364, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file:before {
+  content: "";
+}
+
+/* line 365, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text:before {
+  content: "";
+}
+
+/* line 366, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-asc:before {
+  content: "";
+}
+
+/* line 367, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-desc:before {
+  content: "";
+}
+
+/* line 368, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-asc:before {
+  content: "";
+}
+
+/* line 369, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-desc:before {
+  content: "";
+}
+
+/* line 370, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-asc:before {
+  content: "";
+}
+
+/* line 371, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-desc:before {
+  content: "";
+}
+
+/* line 372, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-up:before {
+  content: "";
+}
+
+/* line 373, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-down:before {
+  content: "";
+}
+
+/* line 374, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-square:before {
+  content: "";
+}
+
+/* line 375, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube:before {
+  content: "";
+}
+
+/* line 376, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing:before {
+  content: "";
+}
+
+/* line 377, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing-square:before {
+  content: "";
+}
+
+/* line 378, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-play:before {
+  content: "";
+}
+
+/* line 379, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dropbox:before {
+  content: "";
+}
+
+/* line 380, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-overflow:before {
+  content: "";
+}
+
+/* line 381, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-instagram:before {
+  content: "";
+}
+
+/* line 382, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flickr:before {
+  content: "";
+}
+
+/* line 383, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adn:before {
+  content: "";
+}
+
+/* line 384, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket:before {
+  content: "";
+}
+
+/* line 385, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket-square:before {
+  content: "";
+}
+
+/* line 386, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr:before {
+  content: "";
+}
+
+/* line 387, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr-square:before {
+  content: "";
+}
+
+/* line 388, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-down:before {
+  content: "";
+}
+
+/* line 389, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-up:before {
+  content: "";
+}
+
+/* line 390, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-left:before {
+  content: "";
+}
+
+/* line 391, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-right:before {
+  content: "";
+}
+
+/* line 392, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-apple:before {
+  content: "";
+}
+
+/* line 393, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-windows:before {
+  content: "";
+}
+
+/* line 394, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-android:before {
+  content: "";
+}
+
+/* line 395, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linux:before {
+  content: "";
+}
+
+/* line 396, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dribbble:before {
+  content: "";
+}
+
+/* line 397, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-skype:before {
+  content: "";
+}
+
+/* line 398, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-foursquare:before {
+  content: "";
+}
+
+/* line 399, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trello:before {
+  content: "";
+}
+
+/* line 400, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-female:before {
+  content: "";
+}
+
+/* line 401, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-male:before {
+  content: "";
+}
+
+/* line 402, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gittip:before,
+.fa-gratipay:before {
+  content: "";
+}
+
+/* line 404, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sun-o:before {
+  content: "";
+}
+
+/* line 405, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-moon-o:before {
+  content: "";
+}
+
+/* line 406, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-archive:before {
+  content: "";
+}
+
+/* line 407, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bug:before {
+  content: "";
+}
+
+/* line 408, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vk:before {
+  content: "";
+}
+
+/* line 409, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-weibo:before {
+  content: "";
+}
+
+/* line 410, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-renren:before {
+  content: "";
+}
+
+/* line 411, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pagelines:before {
+  content: "";
+}
+
+/* line 412, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-exchange:before {
+  content: "";
+}
+
+/* line 413, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-right:before {
+  content: "";
+}
+
+/* line 414, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-left:before {
+  content: "";
+}
+
+/* line 415, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "";
+}
+
+/* line 417, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "";
+}
+
+/* line 418, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wheelchair:before {
+  content: "";
+}
+
+/* line 419, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vimeo-square:before {
+  content: "";
+}
+
+/* line 420, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "";
+}
+
+/* line 422, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square-o:before {
+  content: "";
+}
+
+/* line 423, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-space-shuttle:before {
+  content: "";
+}
+
+/* line 424, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-slack:before {
+  content: "";
+}
+
+/* line 425, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-square:before {
+  content: "";
+}
+
+/* line 426, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wordpress:before {
+  content: "";
+}
+
+/* line 427, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-openid:before {
+  content: "";
+}
+
+/* line 428, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: "";
+}
+
+/* line 431, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "";
+}
+
+/* line 433, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yahoo:before {
+  content: "";
+}
+
+/* line 434, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google:before {
+  content: "";
+}
+
+/* line 435, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit:before {
+  content: "";
+}
+
+/* line 436, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit-square:before {
+  content: "";
+}
+
+/* line 437, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon-circle:before {
+  content: "";
+}
+
+/* line 438, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon:before {
+  content: "";
+}
+
+/* line 439, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-delicious:before {
+  content: "";
+}
+
+/* line 440, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-digg:before {
+  content: "";
+}
+
+/* line 441, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper:before {
+  content: "";
+}
+
+/* line 442, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper-alt:before {
+  content: "";
+}
+
+/* line 443, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-drupal:before {
+  content: "";
+}
+
+/* line 444, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-joomla:before {
+  content: "";
+}
+
+/* line 445, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-language:before {
+  content: "";
+}
+
+/* line 446, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fax:before {
+  content: "";
+}
+
+/* line 447, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building:before {
+  content: "";
+}
+
+/* line 448, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-child:before {
+  content: "";
+}
+
+/* line 449, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paw:before {
+  content: "";
+}
+
+/* line 450, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spoon:before {
+  content: "";
+}
+
+/* line 451, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cube:before {
+  content: "";
+}
+
+/* line 452, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cubes:before {
+  content: "";
+}
+
+/* line 453, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance:before {
+  content: "";
+}
+
+/* line 454, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance-square:before {
+  content: "";
+}
+
+/* line 455, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam:before {
+  content: "";
+}
+
+/* line 456, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam-square:before {
+  content: "";
+}
+
+/* line 457, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-recycle:before {
+  content: "";
+}
+
+/* line 458, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-automobile:before,
+.fa-car:before {
+  content: "";
+}
+
+/* line 460, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cab:before,
+.fa-taxi:before {
+  content: "";
+}
+
+/* line 462, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tree:before {
+  content: "";
+}
+
+/* line 463, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spotify:before {
+  content: "";
+}
+
+/* line 464, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-deviantart:before {
+  content: "";
+}
+
+/* line 465, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-soundcloud:before {
+  content: "";
+}
+
+/* line 466, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-database:before {
+  content: "";
+}
+
+/* line 467, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-pdf-o:before {
+  content: "";
+}
+
+/* line 468, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-word-o:before {
+  content: "";
+}
+
+/* line 469, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-excel-o:before {
+  content: "";
+}
+
+/* line 470, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-powerpoint-o:before {
+  content: "";
+}
+
+/* line 471, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: "";
+}
+
+/* line 474, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: "";
+}
+
+/* line 476, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: "";
+}
+
+/* line 478, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "";
+}
+
+/* line 480, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-code-o:before {
+  content: "";
+}
+
+/* line 481, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vine:before {
+  content: "";
+}
+
+/* line 482, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-codepen:before {
+  content: "";
+}
+
+/* line 483, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-jsfiddle:before {
+  content: "";
+}
+
+/* line 484, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: "";
+}
+
+/* line 489, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o-notch:before {
+  content: "";
+}
+
+/* line 490, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ra:before,
+.fa-rebel:before {
+  content: "";
+}
+
+/* line 492, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ge:before,
+.fa-empire:before {
+  content: "";
+}
+
+/* line 494, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git-square:before {
+  content: "";
+}
+
+/* line 495, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git:before {
+  content: "";
+}
+
+/* line 496, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hacker-news:before {
+  content: "";
+}
+
+/* line 497, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tencent-weibo:before {
+  content: "";
+}
+
+/* line 498, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qq:before {
+  content: "";
+}
+
+/* line 499, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "";
+}
+
+/* line 501, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "";
+}
+
+/* line 503, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "";
+}
+
+/* line 505, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-history:before {
+  content: "";
+}
+
+/* line 506, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-genderless:before,
+.fa-circle-thin:before {
+  content: "";
+}
+
+/* line 508, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-header:before {
+  content: "";
+}
+
+/* line 509, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paragraph:before {
+  content: "";
+}
+
+/* line 510, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sliders:before {
+  content: "";
+}
+
+/* line 511, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt:before {
+  content: "";
+}
+
+/* line 512, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt-square:before {
+  content: "";
+}
+
+/* line 513, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bomb:before {
+  content: "";
+}
+
+/* line 514, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: "";
+}
+
+/* line 516, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tty:before {
+  content: "";
+}
+
+/* line 517, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-binoculars:before {
+  content: "";
+}
+
+/* line 518, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plug:before {
+  content: "";
+}
+
+/* line 519, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-slideshare:before {
+  content: "";
+}
+
+/* line 520, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitch:before {
+  content: "";
+}
+
+/* line 521, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yelp:before {
+  content: "";
+}
+
+/* line 522, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-newspaper-o:before {
+  content: "";
+}
+
+/* line 523, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wifi:before {
+  content: "";
+}
+
+/* line 524, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calculator:before {
+  content: "";
+}
+
+/* line 525, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paypal:before {
+  content: "";
+}
+
+/* line 526, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-wallet:before {
+  content: "";
+}
+
+/* line 527, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-visa:before {
+  content: "";
+}
+
+/* line 528, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-mastercard:before {
+  content: "";
+}
+
+/* line 529, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-discover:before {
+  content: "";
+}
+
+/* line 530, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-amex:before {
+  content: "";
+}
+
+/* line 531, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-paypal:before {
+  content: "";
+}
+
+/* line 532, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-stripe:before {
+  content: "";
+}
+
+/* line 533, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-slash:before {
+  content: "";
+}
+
+/* line 534, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-slash-o:before {
+  content: "";
+}
+
+/* line 535, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trash:before {
+  content: "";
+}
+
+/* line 536, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-copyright:before {
+  content: "";
+}
+
+/* line 537, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-at:before {
+  content: "";
+}
+
+/* line 538, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eyedropper:before {
+  content: "";
+}
+
+/* line 539, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paint-brush:before {
+  content: "";
+}
+
+/* line 540, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-birthday-cake:before {
+  content: "";
+}
+
+/* line 541, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-area-chart:before {
+  content: "";
+}
+
+/* line 542, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pie-chart:before {
+  content: "";
+}
+
+/* line 543, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-line-chart:before {
+  content: "";
+}
+
+/* line 544, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lastfm:before {
+  content: "";
+}
+
+/* line 545, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lastfm-square:before {
+  content: "";
+}
+
+/* line 546, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-off:before {
+  content: "";
+}
+
+/* line 547, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-on:before {
+  content: "";
+}
+
+/* line 548, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bicycle:before {
+  content: "";
+}
+
+/* line 549, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bus:before {
+  content: "";
+}
+
+/* line 550, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ioxhost:before {
+  content: "";
+}
+
+/* line 551, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angellist:before {
+  content: "";
+}
+
+/* line 552, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc:before {
+  content: "";
+}
+
+/* line 553, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: "";
+}
+
+/* line 556, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meanpath:before {
+  content: "";
+}
+
+/* line 557, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-buysellads:before {
+  content: "";
+}
+
+/* line 558, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-connectdevelop:before {
+  content: "";
+}
+
+/* line 559, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dashcube:before {
+  content: "";
+}
+
+/* line 560, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-forumbee:before {
+  content: "";
+}
+
+/* line 561, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-leanpub:before {
+  content: "";
+}
+
+/* line 562, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sellsy:before {
+  content: "";
+}
+
+/* line 563, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shirtsinbulk:before {
+  content: "";
+}
+
+/* line 564, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-simplybuilt:before {
+  content: "";
+}
+
+/* line 565, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-skyatlas:before {
+  content: "";
+}
+
+/* line 566, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cart-plus:before {
+  content: "";
+}
+
+/* line 567, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cart-arrow-down:before {
+  content: "";
+}
+
+/* line 568, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-diamond:before {
+  content: "";
+}
+
+/* line 569, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ship:before {
+  content: "";
+}
+
+/* line 570, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-secret:before {
+  content: "";
+}
+
+/* line 571, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-motorcycle:before {
+  content: "";
+}
+
+/* line 572, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-street-view:before {
+  content: "";
+}
+
+/* line 573, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heartbeat:before {
+  content: "";
+}
+
+/* line 574, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus:before {
+  content: "";
+}
+
+/* line 575, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars:before {
+  content: "";
+}
+
+/* line 576, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mercury:before {
+  content: "";
+}
+
+/* line 577, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-transgender:before {
+  content: "";
+}
+
+/* line 578, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-transgender-alt:before {
+  content: "";
+}
+
+/* line 579, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus-double:before {
+  content: "";
+}
+
+/* line 580, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-double:before {
+  content: "";
+}
+
+/* line 581, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus-mars:before {
+  content: "";
+}
+
+/* line 582, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke:before {
+  content: "";
+}
+
+/* line 583, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke-v:before {
+  content: "";
+}
+
+/* line 584, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke-h:before {
+  content: "";
+}
+
+/* line 585, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-neuter:before {
+  content: "";
+}
+
+/* line 586, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-official:before {
+  content: "";
+}
+
+/* line 587, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest-p:before {
+  content: "";
+}
+
+/* line 588, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-whatsapp:before {
+  content: "";
+}
+
+/* line 589, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-server:before {
+  content: "";
+}
+
+/* line 590, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-plus:before {
+  content: "";
+}
+
+/* line 591, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-times:before {
+  content: "";
+}
+
+/* line 592, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hotel:before,
+.fa-bed:before {
+  content: "";
+}
+
+/* line 594, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-viacoin:before {
+  content: "";
+}
+
+/* line 595, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-train:before {
+  content: "";
+}
+
+/* line 596, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-subway:before {
+  content: "";
+}
+
+/* line 597, /home/Roc/.gem/ruby/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
+.fa-medium:before {
+  content: "";
+}
+
+/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 12, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 30, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ */
+/* line 42, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+/* line 51, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+/* line 67, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+/* line 77, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+/* line 89, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+/* line 102, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+/* line 111, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+/* line 126, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 131, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 136, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 141, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 146, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 151, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+/* line 160, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+/* line 168, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 173, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+/* line 181, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+/* line 189, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 198, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+/* line 208, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: WorkAroundWebKitAndMozilla, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+/* line 224, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/* 2 */
+/* line 230, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 236, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+/* line 245, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 253, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 257, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 270, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 277, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+/* line 285, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+/* line 295, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+/* line 312, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+/* line 321, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+/* line 334, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+/* line 347, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+/* line 355, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 367, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+/* line 380, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+/* line 394, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+/* line 406, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+  *overflow: visible;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+/* line 419, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+/* line 431, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+/* line 444, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+/* line 455, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+/* line 465, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+/* line 476, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+/* line 490, /home/Roc/rcrmn.github.com/_assets/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSansLightItalic";
+  src: url("../fonts/OpenSans-LightItalic-webfont.eot");
+  src: url("../fonts/OpenSans-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-LightItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-LightItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "OpenSansItalic";
+  src: url("../fonts/OpenSans-Italic-webfont.eot");
+  src: url("../fonts/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Italic-webfont.woff") format("woff"), url("../fonts/OpenSans-Italic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Italic-webfont.svg#OpenSansItalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url("../fonts/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "OpenSansSemiboldItalic";
+  src: url("../fonts/OpenSans-SemiboldItalic-webfont.eot");
+  src: url("../fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-SemiboldItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: "OpenSansBoldItalic";
+  src: url("../fonts/OpenSans-BoldItalic-webfont.eot");
+  src: url("../fonts/OpenSans-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-BoldItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-BoldItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 6, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+* {
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/* line 14, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+body {
+  padding: 0px 0 20px 0px;
+  margin: 0px;
+  font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f0e7d5;
+  font-weight: normal;
+  background: #272622;
+}
+
+/* line 22, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h1, h2, h3, h4, h5, h6 {
+  color: #f9f2d5;
+  margin: 0 0 10px;
+  font-family: "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+/* line 28, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+p, ul, ol, table, pre, dl {
+  margin: 0 0 20px;
+}
+
+/* line 31, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+p {
+  text-align: justify;
+}
+
+/* line 34, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+/* line 37, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h1 {
+  font-size: 28px;
+}
+
+/* line 40, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h2 {
+  font-size: 24px;
+}
+
+/* line 43, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h4, h5, h6 {
+  color: #f9f2d5;
+}
+
+/* line 46, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: normal;
+  color: #b6b6b6;
+}
+
+/* line 53, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+a {
+  color: #ffcc00;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+}
+/* line 58, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+a:hover {
+  color: #ffeb9b;
+}
+/* line 60, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+a:active, a:focus {
+  border: none;
+  outline: none;
+}
+
+/* line 64, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+a small {
+  font-size: 11px;
+  color: #666;
+  margin-top: -0.6em;
+  display: block;
+}
+
+/* line 71, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h1 a {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-weight: normal;
+}
+/* line 75, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+h1 a:hover {
+  color: #ffeb9b;
+}
+
+/* line 79, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+strong {
+  font-family: "OpenSansBold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: normal;
+}
+
+/* line 84, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+blockquote {
+  border-left: 3px solid #ffcc00;
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-style: italic;
+}
+
+/* line 90, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+code {
+  font-family: "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+  color: #efefef;
+  font-size: 13px;
+  margin: 0 1px;
+  padding: 4px;
+  background-color: #1d1c1a;
+  border-radius: 2px;
+  border: 1px solid black;
+  word-break: keep-all;
+  display: inline-block;
+}
+/* line 101, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+pre code {
+  border: 0 !important;
+}
+
+/* line 104, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+pre {
+  padding: 8px 15px;
+  background: #1d1c1a;
+  border-radius: 4px;
+  border: 1px solid #121212;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  overflow-y: hidden;
+}
+/* line 112, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+pre code {
+  color: #efefef;
+  text-shadow: 0px 1px 0px #5E5D57;
+  margin: 0;
+  padding: 0;
+  border-radius: initial;
+  background-color: transparent;
+}
+
+/* line 120, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* line 124, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+th {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #434343;
+  color: #b6b6b6;
+  font-family: "OpenSansSemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: normal;
+}
+
+/* line 132, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #434343;
+}
+
+/* line 137, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+hr {
+  border: 0;
+  outline: none;
+  height: 3px;
+  margin: 0 0 20px;
+}
+
+/* line 143, /home/Roc/rcrmn.github.com/_assets/stylesheets/_base.sass */
+dt {
+  color: #F0E7D5;
+  font-family: "OpenSansSemibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: normal;
+}
+
+/* line 2, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+.wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+@media print, screen and (max-width: 600px) {
+  /* line 2, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+  .wrapper {
+    padding: 0;
+  }
+}
+
+/* line 10, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header {
+  padding: 30px 0px 0px 0px;
+  margin: 20px 0;
+}
+@media print, screen and (max-width: 600px) {
+  /* line 10, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+  #header {
+    height: auto;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+/* line 17, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header h1 {
+  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+}
+/* line 24, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header h2 {
+  color: #d7cfbe;
+  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+}
+/* line 32, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header .slicknav_menu {
+  display: none;
+  background-color: #5E5D57;
+  margin-bottom: 1em;
+}
+@media print, screen and (max-width: 600px) {
+  /* line 32, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+  #header .slicknav_menu {
+    display: block;
+  }
+}
+/* line 38, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header .slicknav_menu a {
+  border-radius: 0;
+}
+/* line 40, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header .slicknav_menu > a {
+  background-color: #272622;
+}
+/* line 42, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header .slicknav_menu > a .slicknav_icon {
+  float: right;
+}
+/* line 45, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header .slicknav_menu ul a {
+  background-color: transparent;
+}
+/* line 47, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header .slicknav_menu ul a.icon {
+  display: inline-block;
+  padding-right: 10px;
+}
+/* line 50, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header .slicknav_menu ul a:hover, #header .slicknav_menu ul a:active {
+  background-color: #272622;
+  color: #f9f2d5;
+}
+/* line 55, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav {
+  padding: 0;
+  margin: 30px 0 30px 0;
+  border-bottom: 1px solid #99978e;
+}
+/* line 61, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav .menu-btn {
+  display: none;
+  text-align: right;
+  font-size: 40px;
+}
+/* line 66, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+}
+/* line 73, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav ul li {
+  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  list-style: none;
+  -webkit-flex: 1 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  text-align: center;
+}
+/* line 79, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav ul li a {
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: inline-block;
+}
+/* line 83, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav ul li a.fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 87, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav ul li a.icon {
+  padding: 20px 5px;
+  font-size: 120%;
+}
+/* line 90, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#header nav ul li a:hover, #header nav ul li a:active {
+  background-color: #1d1c1a;
+}
+@media print, screen and (max-width: 600px) {
+  /* line 55, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+  #header nav {
+    display: none;
+  }
+  /* line 95, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+  #header nav li.downloads, #header nav li.title {
+    display: none;
+    text-align: center;
+  }
+  /* line 98, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+  #header nav li.downloads li, #header nav li.title li {
+    font-size: 16px;
+    border-top: 1px solid #99978e;
+    padding: 8px 0;
+  }
+  /* line 102, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+  #header nav .menu-btn {
+    display: block;
+  }
+}
+
+/* line 106, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+article.post {
+  margin-top: 50px;
+}
+/* line 108, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+article.post:after {
+  border-bottom: 1px solid #99978e;
+  display: block;
+  width: 50%;
+  margin: 50px auto;
+  content: "";
+}
+
+/* line 116, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+#content img {
+  max-width: 80%;
+  margin: 0.5em auto;
+  display: block;
+}
+
+/* line 121, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+footer {
+  text-align: center;
+  font-size: 10px;
+  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 125, /home/Roc/rcrmn.github.com/_assets/stylesheets/_layout.sass */
+footer p {
+  margin-bottom: 0.6em;
+}
+
+/* line 1, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight {
+  color: #d0d0d0;
+  /* Comment */
+  /* Error */
+  /* Generic */
+  /* Keyword */
+  /* Literal */
+  /* Name */
+  /* Operator */
+  /* Other */
+  /* Punctuation */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Deleted */
+  /* Generic.Emph */
+  /* Generic.Error */
+  /* Generic.Heading */
+  /* Generic.Inserted */
+  /* Generic.Output */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Generic.Traceback */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Date */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Label */
+  /* Name.Namespace */
+  /* Name.Other */
+  /* Name.Property */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Literal.Number.Integer.Long */
+}
+/* line 3, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .hll {
+  background-color: #404040;
+}
+/* line 4, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .c {
+  color: #999999;
+  font-style: italic;
+}
+/* line 5, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+/* line 6, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .g {
+  color: #d0d0d0;
+}
+/* line 7, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .k {
+  color: #6ab825;
+  font-weight: normal;
+}
+/* line 8, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .l {
+  color: #d0d0d0;
+}
+/* line 9, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .n {
+  color: #d0d0d0;
+}
+/* line 10, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .o {
+  color: #d0d0d0;
+}
+/* line 11, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .x {
+  color: #d0d0d0;
+}
+/* line 12, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .p {
+  color: #d0d0d0;
+}
+/* line 13, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .cm {
+  color: #999999;
+  font-style: italic;
+}
+/* line 14, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .cp {
+  color: #cd2828;
+  font-weight: normal;
+}
+/* line 15, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .c1 {
+  color: #999999;
+  font-style: italic;
+}
+/* line 16, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .cs {
+  color: #e50808;
+  font-weight: normal;
+  background-color: #520000;
+}
+/* line 17, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gd {
+  color: #d22323;
+}
+/* line 18, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .ge {
+  color: #d0d0d0;
+  font-style: italic;
+}
+/* line 19, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gr {
+  color: #d22323;
+}
+/* line 20, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gh {
+  color: #ffffff;
+  font-weight: normal;
+}
+/* line 21, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gi {
+  color: #589819;
+}
+/* line 22, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .go {
+  color: #cccccc;
+}
+/* line 23, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gp {
+  color: #aaaaaa;
+}
+/* line 24, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gs {
+  color: #d0d0d0;
+  font-weight: normal;
+}
+/* line 25, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gu {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* line 26, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .gt {
+  color: #d22323;
+}
+/* line 27, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .kc {
+  color: #6ab825;
+  font-weight: normal;
+}
+/* line 28, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .kd {
+  color: #6ab825;
+  font-weight: normal;
+}
+/* line 29, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .kn {
+  color: #6ab825;
+  font-weight: normal;
+}
+/* line 30, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .kp {
+  color: #6ab825;
+}
+/* line 31, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .kr {
+  color: #6ab825;
+  font-weight: normal;
+}
+/* line 32, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .kt {
+  color: #6ab825;
+  font-weight: normal;
+}
+/* line 33, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .ld {
+  color: #d0d0d0;
+}
+/* line 34, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .m {
+  color: #3677a9;
+}
+/* line 35, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .s {
+  color: #9dd5f1;
+}
+/* line 36, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .na {
+  color: #bbbbbb;
+}
+/* line 37, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nb {
+  color: #24909d;
+}
+/* line 38, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nc {
+  color: #447fcf;
+  text-decoration: underline;
+}
+/* line 39, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .no {
+  color: #40ffff;
+}
+/* line 40, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nd {
+  color: #ffa500;
+}
+/* line 41, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .ni {
+  color: #d0d0d0;
+}
+/* line 42, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .ne {
+  color: #bbbbbb;
+}
+/* line 43, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nf {
+  color: #447fcf;
+}
+/* line 44, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nl {
+  color: #d0d0d0;
+}
+/* line 45, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nn {
+  color: #447fcf;
+  text-decoration: underline;
+}
+/* line 46, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nx {
+  color: #d0d0d0;
+}
+/* line 47, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .py {
+  color: #d0d0d0;
+}
+/* line 48, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nt {
+  color: #6ab825;
+}
+/* line 49, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .nv {
+  color: #40ffff;
+}
+/* line 50, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .ow {
+  color: #6ab825;
+  font-weight: normal;
+}
+/* line 51, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .w {
+  color: #666666;
+}
+/* line 52, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .mf {
+  color: #3677a9;
+}
+/* line 53, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .mh {
+  color: #3677a9;
+}
+/* line 54, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .mi {
+  color: #3677a9;
+}
+/* line 55, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .mo {
+  color: #3677a9;
+}
+/* line 56, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .sb {
+  color: #9dd5f1;
+}
+/* line 57, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .sc {
+  color: #9dd5f1;
+}
+/* line 58, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .sd {
+  color: #9dd5f1;
+}
+/* line 59, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .s2 {
+  color: #9dd5f1;
+}
+/* line 60, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .se {
+  color: #9dd5f1;
+}
+/* line 61, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .sh {
+  color: #9dd5f1;
+}
+/* line 62, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .si {
+  color: #9dd5f1;
+}
+/* line 63, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .sx {
+  color: #ffa500;
+}
+/* line 64, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .sr {
+  color: #9dd5f1;
+}
+/* line 65, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .s1 {
+  color: #9dd5f1;
+}
+/* line 66, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .ss {
+  color: #9dd5f1;
+}
+/* line 67, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .bp {
+  color: #24909d;
+}
+/* line 68, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .vc {
+  color: #40ffff;
+}
+/* line 69, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .vg {
+  color: #40ffff;
+}
+/* line 70, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .vi {
+  color: #40ffff;
+}
+/* line 71, /home/Roc/rcrmn.github.com/_assets/stylesheets/_syntax-highlighting.scss */
+.highlight .il {
+  color: #3677a9;
+}

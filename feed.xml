@@ -1,21 +1,219 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>{{ site.name }}</title>
-		<description>{{ site.description }}</description>
-		<link>{{ site.url }}{{ site.baseurl }}</link>
-		<atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
+		<title>Roc Ramon</title>
+		<description>Blog by a game programmer and player.</description>
+		<link>http://rcrmn.github.io</link>
+		<atom:link href="http://rcrmn.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		
 			<item>
-				<title>{{ post.title }}</title>
-				<description>{{ post.content | xml_escape }}</description>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+				<title>Fisheye to Equirectangular Projection Plugin for After Effects</title>
+				<description>&lt;p&gt;There are multiple ways to record 3D videos. In this post we will be talking of videos recorded for 3D played in an
+immersive environment using a frontal dome.&lt;/p&gt;
+
+&lt;p&gt;This kind of videos are recorded using a two-camera rig with fisheye with a field of view of 180º. These videos look
+something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/fisheye-circle-1.jpg&quot; alt=&quot;&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This image can be presented with an equirectangular projection, which would look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/fisheye-transformed-1.jpg&quot; alt=&quot;&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;the-problem&quot;&gt;The problem&lt;/h2&gt;
+&lt;p&gt;We have to make some 3D videos that have been recorde using two GoPro with a 180 fisheye lens each one. The problem
+is that the vides need to be in equirectangular projection, since the software it has to be played on doesn’t support
+playback of fisheye projection.&lt;/p&gt;
+
+&lt;p&gt;Until now, the video team in our company has been doing it with a very manual system. Their 3D video-editing software
+doesn’t take much into consideration the fisheye 180º videos, so they had to warp and position the video in a way that
+was very very manual and didn’t produce optimal results.&lt;/p&gt;
+
+&lt;p&gt;On Monday it was decided that I would try and make it easier for them by making a plug-in for After Effects to
+automate the change of projections.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-quest&quot;&gt;The quest&lt;/h2&gt;
+&lt;p&gt;After looking for a while, I got to some website where they proposed various ways of transforming the frames from a video:
+- One was to use Quartz Composer, an outdated tool from OsX. I decided it would not be a good solution since it would be 
+difficult even to find the latest release.
+- Create a filter using Pixel Bender by Adobe and use it as a Plug-In in After Effects.
+- Create a full C/C++ plug-in for After Effects that did the transformation.&lt;/p&gt;
+
+&lt;p&gt;The simplest way to do what we needed seemed to be by using Pixel Bender. It wasn’t until the filter was already created
+and working that I discovered that since Adobe CS6, Pixel Bender filters were no longer supported as plug-ins for After
+Effects.&lt;/p&gt;
+
+&lt;p&gt;So, having the filter already created and the maths of it working correctly, I went along and started development of a
+full C++ After Effects plug-in. It took me a whole day to have it working right.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-first-enemy-projection-maths&quot;&gt;The first enemy: projection maths&lt;/h2&gt;
+&lt;p&gt;The filter we are going to create is going to use the standard way of applying transformations to an image:
+For each pixel of the output, it’s going to find the untransformed position in the input image and take
+the color corresponding to that position. We are going to use subpixel sampling to avoid tessellation.&lt;/p&gt;
+
+&lt;p&gt;To get the untransformed position from the input, we have to consider the two coordinate systems we are working on.&lt;/p&gt;
+
+&lt;p&gt;To apply the equirectangular projected image over the hemisphere we use the following set of coordinates:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/semi-sphere-equirect-coords.png&quot; alt=&quot;Equirectangular coordinates&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where the angle θ will be used as x coordinates of the image and the angle φ will be treated as y coordinates.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/equirectangular-projection.png&quot; alt=&quot;Equirectangular projection&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To apply the equidistant fisheye projected image over the hemisphere we use the following set of coordinates.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/semi-sphere-equidist-coords.png&quot; alt=&quot;Equidistant fisheye coordinates&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where the angle θ’ will be used as the angle in the circular image, and the radius r will be used as the radius
+in the circular image, as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/equidistant-projection.png&quot; alt=&quot;Equirectangular projection&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, to get the x’,y’ position for the circular image we will have to first pass the coordinates x,y from the rectangular
+output image to spherical coordinates using the first coordinate system, then those to the second shown spherical
+coordinate system, then those to the polar projection and then pass the polar system to cardinal x’,y’.&lt;/p&gt;
+
+&lt;p&gt;The formulas for each step will be:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/math-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/math-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/math-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/math-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/math-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once we have the unprojected coordinates, we apply a subpixel sampling filter to the original image at that point,
+and the color we obtain is the color used for the transformed image.&lt;/p&gt;
+
+&lt;p&gt;I used &lt;a href=&quot;http://www.adobe.com/devnet/archive/pixelbender.html&quot;&gt;Adobe Pixel Bender&lt;/a&gt; to test these transformations and
+tweak any sign changes. The code for the function is as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;evaluatePixel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;float2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outCoord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;srcSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;M_PI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;phi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;M_PI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;float3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sphericCoords&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;float3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;phi2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sphericCoords&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;M_PI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;theta2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;atan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sphericCoords&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sphericCoords&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	
+	&lt;span class=&quot;n&quot;&gt;float2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inCentered&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;float2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phi2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theta2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;phi2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theta2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	
+	&lt;span class=&quot;n&quot;&gt;float2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inCentered&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;float2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	
+	&lt;span class=&quot;n&quot;&gt;dst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;srcSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-second-enemy-after-effects-sdk&quot;&gt;The second enemy: After Effects SDK&lt;/h2&gt;
+
+&lt;p&gt;Once I had the math working properly it was time to tackle at the After Effects SDK. It is quite a complex system but
+it comes with some example code and with that and a bit of trial and error I managed to put together a working
+implementation of the filter.&lt;/p&gt;
+
+&lt;p&gt;The first implementation of the plugin was the straightforward implementation which for every frame and for every
+pixel calculated the pixel position of the input. That, of course, is very slow, and in a later implementation a
+cache for the input positions was created to speed things up.&lt;/p&gt;
+
+&lt;p&gt;An AE plugin written in C/C++ is a typical library that exposes a function to After Effects, which receives a command
+and the various parameters needed:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;n&quot;&gt;DllExport&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;PF_Err&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EntryPointFunc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PF_Cmd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;PF_InData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;PF_OutData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;PF_ParamDef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;PF_LayerDef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extra&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The entry point function is expected to always respond to some commands, and some other may respond to or not, optionally.
+The required commands are &lt;code&gt;PF_Cmd_ABOUT&lt;/code&gt;, &lt;code&gt;PF_Cmd_GLOBAL_SETUP&lt;/code&gt; and &lt;code&gt;PF_Cmd_PARAMS_SETUP&lt;/code&gt;. These are expected to
+give AE the basic information to make the plugin work or to set any required data for the whole plugin lifespan.
+Their implementation was taken from the code of one of the provided examples and modified so that the plugin
+would have no parameters, since we aren’t using any.&lt;/p&gt;
+
+&lt;p&gt;The initial implementation only responded to one more command, which was &lt;code&gt;PF_Cmd_RENDER&lt;/code&gt;, which is called for every
+frame to be rendered. In it, an iterator function provided by the SDK is used to traverse every pixel to be rendered
+and the transformation is applied to get its final color.&lt;/p&gt;
+
+&lt;p&gt;The info provided by the iterator function to the iterated function consists only of the position of the pixel to be
+rendered and the color of that pixel in the source image, and an optional pointer to a user-provided structure, which
+we have to fill with the original image so we have access to the pixel at the transformed position.&lt;/p&gt;
+
+&lt;p&gt;On the second version of the plugin a matrix was created prior to render a sequence of frames for those frame’s
+dimensions to hold the transformed positions of each pixel of a frame, so that it was computed only once per
+per sequence instead of for each frame.&lt;/p&gt;
+
+&lt;p&gt;This was done by responding to &lt;code&gt;PF_Cmd_SEQUENCE_SETUP&lt;/code&gt;, &lt;code&gt;PF_Cmd_SEQUENCE_RESETUP&lt;/code&gt;, &lt;code&gt;PF_Cmd_SEQUENCE_SETDOWN&lt;/code&gt;,
+and &lt;code&gt;PF_Cmd_FRAME_SETUP&lt;/code&gt;. The later was implemented but it might be it is not necessary for what we are doing,
+but since I’m not fully aware of the actual workflow of AE, I’m not going to risk it.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code&gt;PF_Cmd_SEQUENCE_SETUP&lt;/code&gt; an array of positions is created of size equal to the number of pixels a frame in the
+sequence will have and fill it with the transformed positions each position corresponds to. We don’t have
+access to an actual frame, so according to the documentation, the width and height of the sequence might
+not correspond to the width and height of an actual frame. That’s why we also respond to the command
+&lt;code&gt;PF_Cmd_FRAME_SETUP&lt;/code&gt;, there we check if width and height coincide, and if they don’t, we recreate the array.&lt;/p&gt;
+
+&lt;p&gt;With that, for the command &lt;code&gt;PF_Cmd_RENDER&lt;/code&gt; we only have to take the precomputed values and use them as positions
+in the input image.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code&gt;PF_Cmd_SEQUENCE_SETDOWN&lt;/code&gt; the array of positions is disposed of. In &lt;code&gt;PF_Cmd_SEQUENCE_RESETUP&lt;/code&gt; we simply call
+the implementations of SequenceSetdown and then of SequenceSetup.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
+
+&lt;p&gt;Once the plugin is created, we can use it on a video. The process to apply it is rather tedious, since the plugin
+has to receive a square image with the equidistant projection centered in it and covering it fully. To add
+to this problem, there is also the fact that the videos for each of two eyes has to be synchronized between
+them and that we have to make sure the images of the video for each eye are well aligned.&lt;/p&gt;
+
+&lt;p&gt;After some testing, it was seen that, since the fisheye lens actually has a FOV of 185º, the results were
+a bit better if the images were stretched a bit outside the square, as can be seen in the next images:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/fisheye-circle-2.jpg&quot; alt=&quot;&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015-07-24/fisheye-transformed-2.jpg&quot; alt=&quot;&quot; style=&quot;max-width:300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m sorry that this post is not more tutorialish, I can’t publicly share the work done here, but it might help
+someone anyway, at least in the maths.&lt;/p&gt;
+
+&lt;p&gt;If you are looking for an actual tutorial, &lt;a href=&quot;http://www.mactech.com/articles/mactech/Vol.15/15.09/AfterEffectsPlugins/index.html&quot;&gt;here&lt;/a&gt;
+you can find the one I started with. It’s quite old (1999), but it seems that the SDK is not much different.
+I suggest using that and looking through the example plugins provided in the SDK, there are good examples for
+many things.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading to anyone who stayed this long.&lt;/p&gt;
+
+&lt;p&gt;C’ya!&lt;/p&gt;
+</description>
+				<pubDate>Fri, 24 Jul 2015 15:00:00 +0200</pubDate>
+				<link>http://rcrmn.github.io/2015/07/24/after-effect-fisheye-projection-plugin/</link>
+				<guid isPermaLink="true">http://rcrmn.github.io/2015/07/24/after-effect-fisheye-projection-plugin/</guid>
 			</item>
-		{% endfor %}
+		
+			<item>
+				<title>Welcome to the Blog!</title>
+				<description>&lt;p&gt;So this is the first post!&lt;/p&gt;
+
+&lt;p&gt;I’m going to be sincere. I’ve attempted to run a blog many times and always failed.
+It’s mostly due to the lack of inspiration to update it regularly, it ends falling
+to oblivion.&lt;/p&gt;
+
+&lt;p&gt;I really don’t expect it to have any kind of audience, so I will
+write mostly things that I might need in the future.&lt;/p&gt;
+
+&lt;p&gt;C’ya!&lt;/p&gt;
+</description>
+				<pubDate>Mon, 20 Jul 2015 00:25:00 +0200</pubDate>
+				<link>http://rcrmn.github.io/2015/07/20/welcome-to-the-blog/</link>
+				<guid isPermaLink="true">http://rcrmn.github.io/2015/07/20/welcome-to-the-blog/</guid>
+			</item>
+		
 	</channel>
 </rss>
